@@ -1,0 +1,52 @@
+<head>
+    <title>Hello World</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <style>
+        h1{
+            color: green;
+            text-align: center;
+        }
+        .input_line{
+            text-align: center;
+        }
+        #cal_p{
+            text-align: center;
+        }
+    </style>
+    <script>
+       function cal(){
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            num1=Number(num1);num2=Number(num2);
+            var select_instance = document.getElementById("sel");
+            switch (select_instance.value)
+            {
+                case "+": document.getElementById("result").innerHTML=num1+num2;break;
+                case "-": document.getElementById("result").innerHTML=num1-num2;break;
+                case "*": document.getElementById("result").innerHTML=num1*num2;break;
+                case "\/": document.getElementById("result").innerHTML=num1/num2;break;
+            }
+           
+
+            
+       }
+    </script>
+    <h1>Calculator</h1>
+    <p class='input_line'>
+        <input type="text" id="num1"/>
+        <select id='sel'>
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+        </select>
+        <input type="text" id="num2"/>
+        =
+        <label id="result">Result<label>
+    </p>
+    <p id='cal_p'>
+    <button id='cal' onclick="cal()">CAL</button>
+    </p>
+</body>
